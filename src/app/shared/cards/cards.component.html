@@ -1,11 +1,13 @@
-<div data-theme="business" class="rounded-xl">
+<div data-theme="business" class="rounded-xl md:mx-2 my-2" *ngFor="let demo of demos">
   <div class="card w-96  shadow-md my-3">
-    <figure class="px-10  pt-10"><img class="rounded-xl" src="assets\images\Ziri.png" alt="Ziri" /></figure>
-    <div class="card-body ">
-      <h2 class="card-title text-4xl">Ziri-cash</h2>
-      <p class="text-xl">If a dog chews shoes whose shoes does he choose?</p>
+    <a href="{{demo.url}}" target="_blank">
+      <figure class="px-10  pt-10"><img class="rounded-xl" [src]="demo | imagen" alt="Ziri" /></figure>
+    </a>
+    <div class="card-body">
+      <h2 class="card-title text-4xl">{{demo.title}}</h2>
+      <p class="text-xl">{{demo.desc}}</p>
       <div class="card-actions justify-end">
-        <button class="btn btn-outline rounded-full hover:btn-info">Buy Now</button>
+        <a href="{{demo.url}}" target="_blank" class="btn btn-outline rounded-full hover:btn-info">Go to project</a>
       </div>
     </div>
   </div>
