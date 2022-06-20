@@ -19,4 +19,8 @@ export class CardsService {
     return this.http.get<Card[]>(`${this.baseUrl}/cards`)
   }
 
+  addItem(card: Card): Observable<Card> {
+    return this.http.post<Card>(`${this.baseUrl}/cards`, card)
+  }
+
 }
