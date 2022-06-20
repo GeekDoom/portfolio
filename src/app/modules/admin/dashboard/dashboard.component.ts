@@ -8,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
+  isList!: number;
+  isMenu: boolean = false;
+  isMenuBtn() {
+    this.isMenu = !this.isMenu;
+  }
+  isSearch: boolean = false;
 
 }
