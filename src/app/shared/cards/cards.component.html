@@ -1,7 +1,8 @@
 <div data-theme="business" class="md:rounded-xl md:mx-2 my-2" *ngFor="let demo of demos">
   <div class="card md:w-96  shadow-md my-3">
     <a href="{{demo.url}}" target="_blank">
-      <figure class="px-10  pt-10"><img class="rounded-xl w-96" loading="lazy" [src]="demo | imagen" alt="{{demo.img}}">
+      <figure class="px-10  pt-10"><img class="rounded-xl w-96" width="304px" height="144px" [src]="demo | imagen"
+          alt="{{demo.img}}">
       </figure>
     </a>
     <div class="card-body">
