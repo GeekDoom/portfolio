@@ -4,7 +4,7 @@
   <div class="w-72 absolute sm:relative shadow md:h-full flex-col justify-between hidden sm:flex">
     <div data-theme="business" class="px-4 w-72 h-full">
       <div class="h-16 w-full flex items-center">
-        <a class="btn btn-ghost normal-case md:text-xl -ml-3 text-lg justify-end"><img
+        <a routerLink="/index" class="btn btn-ghost normal-case md:text-xl -ml-3 text-lg justify-end"><img
             src="https://d33wubrfki0l68.cloudfront.net/4fa497b3c19dd2aab86b49e6bfce870a160d78fe/8abb2/img/logo.webp"
             width="30" height="30" alt="" loading="lazy">&nbsp; José Goyos<span class="text-sky-400">&nbsp;/ Web
             Dev</span></a>
@@ -184,7 +184,7 @@
     </div>
     <div data-theme="business" class="px-8">
       <div class="h-16 w-full flex items-center">
-        <a class="btn btn-ghost normal-case -ml-4 text-md justify-end"><img
+        <a routerLink="/index" class="btn btn-ghost normal-case -ml-4 text-md justify-end"><img
             src="https://d33wubrfki0l68.cloudfront.net/4fa497b3c19dd2aab86b49e6bfce870a160d78fe/8abb2/img/logo.webp"
             width="30" height="30" alt="" loading="lazy">&nbsp; José Goyos<span class="text-sky-400">&nbsp;/ Web
             Dev</span></a>
@@ -277,10 +277,48 @@
     </div>
   </div>
   <!-- Sidebar ends -->
-  <div data-theme="cupcake" class="container mx-auto py-10 h-screen md:screen w-screen px-6">
-    <div data-theme="cupcake" class="w-full h-full rounded">
-      <!-- Place your content here -->
-      <h1>Demo</h1>
+  <div data-theme="cupcake" class="container mx-auto py-10 h-fit md:screen w-fit md:h-screen md:w-screen px-6">
+    <div data-theme="cupcake" class="">
+
+      <!--Modals ADD-->
+      <!-- The button to open modal -->
+      <div class="flex justify-end">
+
+        <label data-theme="business" for="my-modal-4" class="btn modal-button rounded-full justify-end hover:btn-info">Add new
+          app</label>
+      </div>
+
+      <!-- Put this part before </body> tag -->
+      <input type="checkbox" id="my-modal-4" class="modal-toggle" />
+      <label for="my-modal-4" class="modal cursor-pointer">
+        <label class="modal-box relative" for="">
+          <div class="form-control">
+            <label class="label mb-4">
+              <span class="label-text text-xl">Add new app</span>
+            </label>
+            <div class="w-fit md:grid md:grid-rows-2 md:grid-flow-col md:gap-2">
+              <input type="text" placeholder="Title" class="input input-bordered input-info w-full max-w-xs my-2" />
+              <input type="text" placeholder="Description"
+                class="input input-bordered input-info w-full max-w-xs my-2" />
+              <input type="text" placeholder="Link" class="input input-bordered input-info w-full max-w-xs my-2" />
+              <input type="text" placeholder="Image Name"
+                class="input input-bordered input-info w-full max-w-xs my-2" />
+            </div>
+            <div class="flex justify-end mt-8">
+              <button data-theme="business" class="btn rounded-full hover:btn-info">Save app</button>
+            </div>
+          </div>
+        </label>
+      </label>
+
+      <!--Modals END-->
+
+
+      <!-- Demos Preview -->
+      <h1 class="text-4xl py-8">Demos</h1>
+      <div class="w-fit  md:flex grid justify-center">
+        <app-cards class="flex flex-wrap justify-center"></app-cards>
+      </div>
     </div>
   </div>
 </div>
