@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { CardsService } from 'src/app/core/services/cards.service';
 
 @Component({
   selector: 'app-upload',
@@ -8,7 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadComponent implements OnInit {
 
-  constructor() { }
+  demosForm = this.fb.group({
+    title: [''],
+    link: [''],
+    desc: [''],
+    imgName: ['']
+  })
+
+
+
+  constructor(
+    private fb: FormBuilder,
+    private cs: CardsService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -20,4 +34,10 @@ export class UploadComponent implements OnInit {
   }
   isSearch: boolean = false;
 
+
+
+  guardar() {
+    this.cs.addItem(this.demosForm.value)
+      .subscribe()
+  }
 }

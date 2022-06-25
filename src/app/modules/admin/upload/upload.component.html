@@ -284,7 +284,8 @@
       <!-- The button to open modal -->
       <div class="flex justify-end">
 
-        <label data-theme="business" for="my-modal-4" class="btn modal-button rounded-full justify-end hover:btn-info">Add new
+        <label data-theme="business" for="my-modal-4"
+          class="btn modal-button rounded-full justify-end hover:btn-info">Add new
           app</label>
       </div>
 
@@ -292,22 +293,24 @@
       <input type="checkbox" id="my-modal-4" class="modal-toggle" />
       <label for="my-modal-4" class="modal cursor-pointer">
         <label class="modal-box relative" for="">
-          <div class="form-control">
+          <form (ngSubmit)="guardar()" [formGroup]="demosForm" class="form-control">
             <label class="label mb-4">
               <span class="label-text text-xl">Add new app</span>
             </label>
             <div class="w-fit md:grid md:grid-rows-2 md:grid-flow-col md:gap-2">
-              <input type="text" placeholder="Title" class="input input-bordered input-info w-full max-w-xs my-2" />
-              <input type="text" placeholder="Description"
+              <input formControlName="title" type="text" placeholder="Title"
                 class="input input-bordered input-info w-full max-w-xs my-2" />
-              <input type="text" placeholder="Link" class="input input-bordered input-info w-full max-w-xs my-2" />
-              <input type="text" placeholder="Image Name"
+              <input formControlName="desc" type="text" placeholder="Description"
+                class="input input-bordered input-info w-full max-w-xs my-2" />
+              <input formControlName="link" type="text" placeholder="Link"
+                class="input input-bordered input-info w-full max-w-xs my-2" />
+              <input formControlName="imgName" type="text" placeholder="Image Name"
                 class="input input-bordered input-info w-full max-w-xs my-2" />
             </div>
             <div class="flex justify-end mt-8">
-              <button data-theme="business" class="btn rounded-full hover:btn-info">Save app</button>
+              <button type="submit" data-theme="business" class="btn rounded-full hover:btn-info">Save app</button>
             </div>
-          </div>
+          </form>
         </label>
       </label>
 
