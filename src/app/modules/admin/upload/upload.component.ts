@@ -38,7 +38,7 @@ export class UploadComponent implements OnInit {
 
   guardar() {
     this.cs.addItem(this.demosForm.value)
-      .subscribe()
-    window.location.reload();
+      .subscribe(item => {
+      })
   }
 }
