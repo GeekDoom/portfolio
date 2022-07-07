@@ -1,15 +1,15 @@
 <div data-theme="business" class="md:rounded-xl md:mx-2 my-2" *ngFor="let demo of demos">
   <div class="card md:w-96  shadow-md my-3">
-    <a href="{{demo.url}}" target="_blank">
+    <a href="{{demo.link}}" target="_blank">
       <figure class="px-10  pt-10"><img class="rounded-xl w-96" width="304px" height="144px" [src]="demo | imagen"
-          alt="{{demo.img}}">
+          alt="{{demo.imgName}}">
       </figure>
     </a>
     <div class="card-body">
       <h2 class="card-title text-4xl">{{demo.title}}</h2>
       <p class="text-xl">{{demo.desc}}</p>
       <div class="card-actions justify-end">
-        <a href="{{demo.url}}" target="_blank" class="btn btn-outline rounded-full hover:btn-info">Go to project</a>
+        <a href="{{demo.link}}" target="_blank" class="btn btn-outline rounded-full hover:btn-info">Go to project</a>
       </div>
     </div>
   </div>

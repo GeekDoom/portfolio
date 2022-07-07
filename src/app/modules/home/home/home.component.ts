@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: []
 })
 export class HomeComponent implements OnInit {
+  Portfolio?: string = this.Portfolio
 
   constructor() { }
 

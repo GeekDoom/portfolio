@@ -7,7 +7,7 @@ import { Card } from '../interfaces/Cards';
 export class ImagenPipe implements PipeTransform {
 
   transform(cardImg: Card): string {
-    return `assets/images/${cardImg.img}.webp`;
+    return `assets/images/${cardImg.imgName}.webp`;
   }
 
 }

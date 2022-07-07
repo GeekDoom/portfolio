@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private as: AuthService
+  ) { }
 
   ngOnInit(): void {
 
@@ -20,6 +25,11 @@ export class DashboardComponent implements OnInit {
     this.isMenu = !this.isMenu;
   }
   isSearch: boolean = false;
+
+  logout() {
+    this.as.logout();
+    this.router.navigateByUrl('/auth')
+  }
 
 
 

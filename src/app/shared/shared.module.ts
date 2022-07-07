@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CardsComponent } from './cards/cards.component';
 import { ImagenPipe } from './pipe/imagen.pipe';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ImagenPipe } from './pipe/imagen.pipe';
   ],
   imports: [
     CommonModule,
+    RouterModule
   ],
   exports: [
     CardsComponent,

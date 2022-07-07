@@ -1,1 +1,32 @@
-<p>login works!</p>
+<div class="h-screen bg-gradient-to-tl from-base-300 to-sky-500 w-full py-16 px-4">
+  <div class="flex flex-col items-center justify-center">
+    <a routerLink="/index" class="btn btn-ghost normal-case md:text-xl -ml-3 text-lg justify-end"><img
+        src="assets\img\logo.webp" width="30" height="30" alt="">
+      &nbsp; José Goyos<span class="text-sky-400">&nbsp;/Web Dev</span></a>
+
+    <form [formGroup]="LoginForm" (ngSubmit)="login()" data-theme="cupcake"
+      class="bg-white shadow rounded lg:w-1/3 md:w-1/2 w-full p-10 mt-16 form-control">
+      <p tabindex="0" role="heading" aria-label="Login" class="text-2xl font-bold  text-gray-800 text-center">Login</p>
+
+      <div class="w-full flex items-center justify-between py-5">
+        <hr class="w-full bg-gray-400" />
+        <p class="text-base font-medium leading-4 px-2.5 text-gray-400"></p>
+        <hr class="w-full bg-gray-400" />
+      </div>
+      <div>
+        <div class="text-sm font-medium leading-none text-gray-800"> Email </div>
+        <input formControlName="email" type="text" placeholder="Type your email"
+          class="input input-bordered input-info w-full my-2" />
+      </div>
+      <div class="mt-6 w-full">
+        <div class="text-sm font-medium leading-none text-gray-800"> Password </div>
+        <input formControlName="password" type="password" placeholder="Type your password"
+          class="input input-bordered input-info w-full  my-2" />
+      </div>
+      <div class="mt-8">
+        <button [disabled]="LoginForm.invalid" role="button" type="submit" aria-label="create my account"
+          class="btn btn-info rounded-full py-4 w-full text-white hover:text-gray-800">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

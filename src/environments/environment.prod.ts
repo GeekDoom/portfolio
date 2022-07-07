@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseURL: 'https://jd-portfolio-back.herokuapp.com'
+  baseURL: 'https://portfolio-back-jd.herokuapp.com/api'
 };

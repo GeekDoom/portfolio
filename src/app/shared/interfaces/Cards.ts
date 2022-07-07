@@ -1,7 +1,7 @@
 export interface Card {
     id?: string;
     title?: string;
-    img?: string;
+    imgName?: string;
     desc?: number;
-    url?: number;
+    link?: number;
 }
