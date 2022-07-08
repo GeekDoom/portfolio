@@ -285,21 +285,24 @@
         shortly </p>
       <div class="relative mb-4">
         <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
-        <input type="text" id="name" name="name" placeholder="Type your name"
+        <input required type="text" id="name" name="name" placeholder="Type your name"
           class="w-full bg-base-100 rounded border border-gray-300 focus:border-sky-500 focus:ring-2  text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
       </div>
       <div class="relative mb-4">
         <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
-        <input type="email" id="email" name="email" placeholder="type your email"
+        <input required type="email" id="email" name="email" placeholder="type your email"
           class="w-full bg-base-100 rounded border border-gray-300 focus:border-sky-500 focus:ring-2  text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
       </div>
       <div class="relative mb-4">
         <label for="message" class="leading-7 text-sm text-gray-400">Message</label>
-        <textarea id="message" name="message" placeholder="Type what you want say to me"
+        <textarea required id="message" name="message" placeholder="Type what you want say to me"
           class="w-full bg-base-100 rounded border border-gray-300 focus:border-sky-500 focus:ring-2 h-32 text-base outline-none  py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
       </div>
-      <button type="submit"
-        class="text-white btn-info border-0 py-2 px-6 focus:outline-none  rounded text-lg">Button</button>
+      <button type="submit" href="/index#contact" class="btn rounded-full btn-info hover:text-white">Contact
+        <svg class="h-6 w-6 ml-2 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+      </button>
       <!--       <p class="text-xs text-gray-400 text-opacity-90 mt-3">Send me a message</p>
  -->
     </div>
