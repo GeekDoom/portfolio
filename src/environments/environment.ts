@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  /*   baseURL: 'https://portfolio-back-jd.herokuapp.com/api'*/
-  baseURL: 'http://localhost:4000/api'
+  baseURL: 'https://portfolio-back-jd.herokuapp.com/api'
 };
 
 /*
