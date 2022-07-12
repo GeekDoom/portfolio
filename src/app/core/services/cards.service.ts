@@ -18,14 +18,14 @@ export class CardsService {
   getCards(): Observable<Card[]> {
     return this.http.get<Card[]>(`${this.baseUrl}/demos`);
   }
-  addItem(card: Card): Observable<Card> {
-    return this.http.post<Card>(`${this.baseUrl}/demos/newDemo`, card);
+  addItem(card: FormData): Observable<FormData> {
+    return this.http.post<FormData>(`${this.baseUrl}/demos/newDemo`, card);
   }
-  deleteItem(id: string): Observable<any> {
-    return this.http.delete<any>(`${this.baseUrl}/demos/${id}`);
+  deleteItem(_id: string): Observable<Card> {
+    return this.http.get<Card>(`${this.baseUrl}/demos/delete/${_id}`);
   }
   updateItem(card: Card): Observable<Card> {
-    return this.http.put<Card>(`${this.baseUrl}/demos/${card.id}`, card);
+    return this.http.put<Card>(`${this.baseUrl}/demos/${card._id}`, card);
   }
 
 }

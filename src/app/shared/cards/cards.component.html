@@ -2,14 +2,18 @@
   <div class="card md:w-96  shadow-md my-3">
     <a href="{{demo.link}}" target="_blank">
       <figure class="px-10  pt-10"><img class="rounded-xl w-96" width="304px" height="144px" [src]="demo | imagen"
-          alt="{{demo.imgName}}">
+          alt="{{demo.imgURL}}">
       </figure>
     </a>
     <div class="card-body">
       <h2 class="card-title text-4xl">{{demo.title}}</h2>
       <p class="text-xl">{{demo.desc}}</p>
       <div class="card-actions justify-end">
-        <a href="{{demo.link}}" target="_blank" class="btn btn-outline rounded-full hover:btn-info">Go to project</a>
+        <a href="{{demo.link}}" target="_blank" class="btn btn-outline rounded-full hover:btn-info mr-auto">Go to
+         
+          project</a>
+        <a *ngIf="_router.url === '/admin/upload'" (click)="delete(demo)" target="_blank"
+          class="btn btn-outline rounded-full hover:btn-error">Delete</a>
       </div>
     </div>
   </div>

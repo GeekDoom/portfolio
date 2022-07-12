@@ -290,7 +290,8 @@
       <input type="checkbox" id="my-modal-4" class="modal-toggle" />
       <label for="my-modal-4" class="modal cursor-pointer">
         <label class="modal-box relative" for="">
-          <form target="_self" autocomplete="off" (ngSubmit)="guardar()" [formGroup]="demosForm" class="form-control">
+          <form target="_self" autocomplete="off" (ngSubmit)="guardar()" [formGroup]="demosForm" class="form-control"
+            action="baseURL">
             <label class="label mb-4">
               <span class="label-text text-xl">Add new app</span>
             </label>
@@ -300,13 +301,11 @@
               <input formControlName="desc" type="text" placeholder="Type the Description"
                 class="input input-bordered input-info w-full my-2" />
               <input formControlName="link" type="text" placeholder="Type the Link"
-                class="input input-bordered input-info w-full my-2" />
-              <input formControlName="imgName" type="text" placeholder="Type the image name"
-                class="input input-bordered input-info w-full my-2" />
+                class="input input-ebordered input-info w-full my-2" />
               <div class="flex justify-center items-center w-full">
                 <label for="dropzone-file"
-                  class="flex flex-col justify-center items-center w-full h-64  rounded-lg border-2 border-sky-500 border-dashed cursor-pointer">
-                  <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                  class="flex flex-col justify-center items-center w-full h-64  rounded-lg border border-sky-500 border-solid cursor-pointer">
+                  <div *ngIf="!imageURL && imageURL !== ''" class="flex flex-col justify-center items-center pt-5 pb-6">
                     <svg class="mb-3 w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -317,7 +316,11 @@
                         upload</span> or drag and drop</p>
                     <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                   </div>
-                  <input disabled="true" id="dropzone-file" type="file" class="hidden">
+                  <div class="w-40" *ngIf="imageURL && imageURL !== ''">
+                    <img [src]="imageURL" [alt]="demosForm.value.name">
+                  </div>
+                  <input accept="image/*" (change)="onFileChange($event)" formControlName="imgURL" id="dropzone-file"
+                    type="file" class="hidden">
                 </label>
               </div>
 

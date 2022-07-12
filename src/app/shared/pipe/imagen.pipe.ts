@@ -6,8 +6,14 @@ import { Card } from '../interfaces/Cards';
 })
 export class ImagenPipe implements PipeTransform {
 
+
+
   transform(cardImg: Card): string {
-    return `assets/images/${cardImg.imgName}.webp`;
+    if (!cardImg.imgURL) {
+      return 'assets/img/no-image.png';
+    } else {
+      return cardImg.imgURL!;
+    }
   }
 
 }

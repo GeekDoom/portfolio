@@ -1,7 +1,8 @@
 export interface Card {
-    id?: string;
+    _id: string;
     title?: string;
-    imgName?: string;
     desc?: number;
     link?: number;
+    imgURL?: string;
+    fileSource?: string;
 }
