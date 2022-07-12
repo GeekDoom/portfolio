@@ -10,7 +10,6 @@
       <p class="text-xl">{{demo.desc}}</p>
       <div class="card-actions justify-end">
         <a href="{{demo.link}}" target="_blank" class="btn btn-outline rounded-full hover:btn-info mr-auto">Go to
-         
           project</a>
         <a *ngIf="_router.url === '/admin/upload'" (click)="delete(demo)" target="_blank"
           class="btn btn-outline rounded-full hover:btn-error">Delete</a>
