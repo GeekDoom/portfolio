@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseURL: 'https://portfolio-back-jd.herokuapp.com/api'
+  baseURL: 'https://https://jd-portfolio-back-production.up.railway.app/api'
 };
 
 /*

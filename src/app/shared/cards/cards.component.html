@@ -9,7 +9,7 @@
       <h2 class="card-title text-4xl">{{demo.title}}</h2>
       <p class="text-xl">{{demo.desc}}</p>
       <div class="card-actions justify-end">
-        <a href="{{demo.link}}" target="_blank" class="btn btn-outline rounded-full hover:btn-info mr-auto">Go to
+        <a href="{{demo.link}}" target="_blank" class="btn btn-outline rounded-full hover:btn-info md:mr-auto">Go to
           project</a>
         <a *ngIf="_router.url === '/admin/upload'" (click)="delete(demo)" target="_blank"
           class="btn btn-outline rounded-full hover:btn-error">Delete</a>
