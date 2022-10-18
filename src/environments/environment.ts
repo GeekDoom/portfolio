@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseURL: 'https://portfolio-back-geekdoom.vercel.app/api'
+  baseURL: 'https://portfolio-back-production.up.railway.app/api'
 };
 
 /*
